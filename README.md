@@ -28,7 +28,51 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem is intended to replace explicitly calling the *subject* before checking
+its side effects. It might be used when testing things like:
+* method which works directly with a database
+* method which works directly with a file system
+* method which integrates mocked objects
+
+There are several aliases for *it_has_side_effects_are* which can be used to
+communicate different things.
+
+```
+subject { test_class.test }
+
+its_side_effects_are do
+  # Check a side effect, such as writing to the file system.
+  # Check a have_received expectation
+end
+```
+
+Or leave out the block and only check expectations which are already setup.
+
+```
+subject { test_class.test }
+
+before do
+  # Setup an expecation for the method call
+end
+
+end
+
+it_has_side_effects
+```
+
+Both of these examples are testing methods where you do not care about the
+return value. When you do care about the return value and the side effects, you
+can do that too.
+
+```
+subject { test_class.test }
+
+it { is_expected.to eq(:result) }
+its_side_effects_are do
+  # Check a side effect, such as writing to the file system.
+  # Check a have_received expectation
+end
+```
 
 ## Development
 
