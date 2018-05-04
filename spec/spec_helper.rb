@@ -1,9 +1,10 @@
 require 'bundler/setup'
-require 'rspec/side_effects'
 
 # Setup code coverage
 require 'simplecov'
 SimpleCov.start
+
+require 'rspec/side_effects'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
