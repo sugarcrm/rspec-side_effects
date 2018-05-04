@@ -32,7 +32,6 @@ Gem::Specification.new do |spec|
 
   # Dependencies whose APIs we do not really depend upon, and can be upgraded
   # without limiting.
-  spec.add_development_dependency 'codeclimate-test-reporter'
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'rubocop-rspec'
   spec.add_development_dependency 'simplecov'
