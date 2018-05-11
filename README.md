@@ -8,7 +8,7 @@
 [![Inline docs](http://inch-ci.org/github/sugarcrm/rspec-side_effects.svg)](http://inch-ci.org/github/sugarcrm/rspec-side_effects)
 [![License](http://img.shields.io/badge/license-Apache2-green.svg?style=flat)](LICENSE)
 
-RSpec extension for check the side effects of your specifications.
+RSpec extension for checking the side effects of your specifications.
 
 ## Installation
 
@@ -32,10 +32,10 @@ This gem is intended to replace explicitly calling the *subject* before checking
 its side effects. It might be used when testing things like:
 * method which works directly with a database
 * method which works directly with a file system
-* method which integrates mocked objects
+* method which only integrates mocked objects
 
 There are several aliases for *it_has_side_effects_are* which can be used to
-communicate different things.
+communicate different things to the reader.
 
 ```
 subject { test_class.test }
