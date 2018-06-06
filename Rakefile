@@ -1,6 +1,7 @@
 require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
+require 'bundler/audit/task'
 require 'pathname'
 
 RSpec::Core::RakeTask.new(:spec) do |task|
@@ -23,4 +24,6 @@ RuboCop::RakeTask.new(:rubocop) do |task|
     ].push(rubocop_report_pathname.to_s)
 end
 
-task default: %i[spec rubocop]
+Bundler::Audit::Task.new
+
+task default: %i[spec rubocop bundle:audit]
