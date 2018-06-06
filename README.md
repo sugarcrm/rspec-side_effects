@@ -1,7 +1,6 @@
 # Rspec::SideEffects
 
 [![Gem Version](https://badge.fury.io/rb/rspec-side_effects.svg)](http://badge.fury.io/rb/rspec-side_effects)
-[![Dependency Status](https://gemnasium.com/sugarcrm/rspec-side_effects.svg)](https://gemnasium.com/sugarcrm/rspec-side_effects)
 [![Build Status](https://travis-ci.org/sugarcrm/rspec-side_effects.svg?branch=master)](https://travis-ci.org/sugarcrm/rspec-side_effects)
 [![Code Climate](https://codeclimate.com/github/sugarcrm/rspec-side_effects/badges/gpa.svg)](https://codeclimate.com/github/sugarcrm/rspec-side_effects)
 [![Test Coverage](https://codeclimate.com/github/sugarcrm/rspec-side_effects/badges/coverage.svg)](https://codeclimate.com/github/sugarcrm/rspec-side_effects/coverage)
