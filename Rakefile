@@ -3,6 +3,8 @@ require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 require 'bundler/audit/task'
 require 'pathname'
+require 'license_finder'
+require 'English'
 
 RSpec::Core::RakeTask.new(:spec) do |task|
   task.rspec_opts = '--warnings'
@@ -26,4 +28,11 @@ end
 
 Bundler::Audit::Task.new
 
-task default: %i[spec rubocop bundle:audit]
+desc 'Check dependency licenses'
+task :license_finder do
+  puts `license_finder --quiet --format text`
+
+  abort('LicenseFinder failed') unless $CHILD_STATUS.success?
+end
+
+task default: %i[spec rubocop bundle:audit license_finder]
