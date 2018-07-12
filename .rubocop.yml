@@ -5,3 +5,7 @@ Metrics/MethodLength:
 
 RSpec/EmptyExampleGroup:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/**

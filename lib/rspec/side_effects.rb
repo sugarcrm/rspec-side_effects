@@ -16,7 +16,11 @@ module Rspec
 
       describe('side effects', *options) do
         if block
-          before { subject }
+          before do
+            # rubocop:disable Lint/HandleExceptions, Lint/RescueException
+            begin; subject; rescue Exception; end
+            # rubocop:enable Lint/HandleExceptions, Lint/RescueException
+          end
           example(nil, :aggregate_failures, *options, &block)
         else
           example(nil, {}) { subject }

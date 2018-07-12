@@ -73,6 +73,19 @@ its_side_effects_are do
 end
 ```
 
+Exceptions are also rescued by the helper, so you can still check side effects
+which also expecting an exception to be raised.
+
+```
+subject { test_class.test }
+
+it { expect { subject }.to raise_error(StandardError) }
+its_side_effects_are do
+  # Check what might have happened before the exception.
+  # Or confirm things which should not have happend with an error.
+end
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
