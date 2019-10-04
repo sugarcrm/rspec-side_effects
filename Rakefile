@@ -2,6 +2,8 @@ require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 require 'bundler/audit/task'
+require 'yard'
+require 'yardstick/rake/measurement'
 require 'pathname'
 require 'license_finder'
 require 'English'
@@ -35,4 +37,13 @@ task :license_finder do
   abort('LicenseFinder failed') unless $CHILD_STATUS.success?
 end
 
-task default: %i[spec rubocop bundle:audit license_finder]
+YARD::Rake::YardocTask.new do |t|
+  t.files         = ['lib/**/*.rb']
+  t.stats_options = ['--list-undoc']
+end
+
+Yardstick::Rake::Measurement.new(:yardstick_measure) do |measurement|
+  measurement.output = 'tmp/yard_coverage.txt'
+end
+
+task default: %i[spec rubocop yardstick_measure bundle:audit license_finder]
