@@ -4,8 +4,10 @@
 [![Build Status](https://travis-ci.org/sugarcrm/rspec-side_effects.svg?branch=master)](https://travis-ci.org/sugarcrm/rspec-side_effects)
 [![Code Climate](https://codeclimate.com/github/sugarcrm/rspec-side_effects/badges/gpa.svg)](https://codeclimate.com/github/sugarcrm/rspec-side_effects)
 [![Test Coverage](https://codeclimate.com/github/sugarcrm/rspec-side_effects/badges/coverage.svg)](https://codeclimate.com/github/sugarcrm/rspec-side_effects/coverage)
-[![Inline docs](http://inch-ci.org/github/sugarcrm/rspec-side_effects.svg)](http://inch-ci.org/github/sugarcrm/rspec-side_effects)
 [![License](http://img.shields.io/badge/license-Apache2-green.svg?style=flat)](LICENSE)
+
+[![Inline docs](http://inch-ci.org/github/sugarcrm/rspec-side_effects.svg)](http://inch-ci.org/github/sugarcrm/rspec-side_effects)
+[![RubyDoc](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://rubydoc.org/gems/rspec-side_effects)
 
 RSpec extension for checking the side effects of your specifications.
 
@@ -92,10 +94,24 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+## Elsewhere on the web
+
+Links to other places on the web where this projects exists:
+
+* [Code Climate](https://codeclimate.com/github/sugarcrm/rspec-side_effects)
+* [InchCI](http://inch-ci.org/github/sugarcrm/rspec-side_effects)
+* [Github](https://github.com/sugarcrm/rspec-side_effects)
+* [OpenHub](https://www.openhub.net/p/rspec-side_effects)
+* [RubyDoc](http://rubydoc.org/gems/rspec-side_effects)
+* [RubyGems](https://rubygems.org/gems/rspec-side_effects)
+* [Ruby LibHunt](https://ruby.libhunt.com/rspec-side_effects-alternatives)
+* [Ruby Toolbox](https://www.ruby-toolbox.com/projects/rspec-side_effects)
+* [TravisCI](https://travis-ci.org/sugarcrm/rspec-side_effects)
+
 ## Contributing
 
 See [CONTRIBUTING](CONTRIBUTING.md) for how you can contribute changes back into this project.
 
 ## Acknowledgments
 
-Copyright 2018 [SugarCRM Inc.](http://sugarcrm.com), released under the Apache2 License.
+Copyright 2019 [SugarCRM Inc.](http://sugarcrm.com), released under the Apache2 License.
