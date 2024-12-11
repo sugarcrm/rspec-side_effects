@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency     'rspec-core', '>= 2.99.0'
 
   spec.add_development_dependency 'bundler', '~> 1.14'
-  spec.add_development_dependency 'rake',    '~> 10.0'
+  spec.add_development_dependency 'rake',    '~> 12.3'
   spec.add_development_dependency 'rspec',   '~> 3.0'
 
   # Dependencies whose APIs we do not really depend upon, and can be upgraded
