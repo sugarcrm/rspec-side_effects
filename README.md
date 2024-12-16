@@ -6,7 +6,6 @@
 [![Test Coverage](https://codeclimate.com/github/sugarcrm/rspec-side_effects/badges/coverage.svg)](https://codeclimate.com/github/sugarcrm/rspec-side_effects/coverage)
 [![License](http://img.shields.io/badge/license-Apache2-green.svg?style=flat)](LICENSE)
 
-[![Inline docs](http://inch-ci.org/github/sugarcrm/rspec-side_effects.svg)](http://inch-ci.org/github/sugarcrm/rspec-side_effects)
 [![RubyDoc](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://rubydoc.org/gems/rspec-side_effects)
 
 RSpec extension for checking the side effects of your specifications.
@@ -99,14 +98,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 Links to other places on the web where this projects exists:
 
 * [Code Climate](https://codeclimate.com/github/sugarcrm/rspec-side_effects)
-* [InchCI](http://inch-ci.org/github/sugarcrm/rspec-side_effects)
 * [Github](https://github.com/sugarcrm/rspec-side_effects)
 * [OpenHub](https://www.openhub.net/p/rspec-side_effects)
-* [RubyDoc](http://rubydoc.org/gems/rspec-side_effects)
+* [RubyDoc](https://rubydoc.info/gems/rspec-side_effects)
 * [RubyGems](https://rubygems.org/gems/rspec-side_effects)
 * [Ruby LibHunt](https://ruby.libhunt.com/rspec-side_effects-alternatives)
 * [Ruby Toolbox](https://www.ruby-toolbox.com/projects/rspec-side_effects)
-* [TravisCI](https://travis-ci.org/sugarcrm/rspec-side_effects)
 
 ## Contributing
 
@@ -114,4 +111,4 @@ See [CONTRIBUTING](CONTRIBUTING.md) for how you can contribute changes back into
 
 ## Acknowledgments
 
-Copyright 2019 [SugarCRM Inc.](http://sugarcrm.com), released under the Apache2 License.
+Copyright 2025 [SugarCRM Inc.](http://sugarcrm.com), released under the [Apache2 License](https://www.apache.org/licenses/LICENSE-2.0.html).
