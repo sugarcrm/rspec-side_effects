@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/side_effects/version'
 
 module Rspec
@@ -16,11 +18,12 @@ module Rspec
 
       describe('side effects', *options) do
         if block
+          # rubocop:disable Lint/HandleExceptions, Lint/RescueException
           before do
-            # rubocop:disable Lint/HandleExceptions, Lint/RescueException
-            begin; subject; rescue Exception; end
-            # rubocop:enable Lint/HandleExceptions, Lint/RescueException
+            subject
+          rescue Exception
           end
+          # rubocop:enable Lint/HandleExceptions, Lint/RescueException
           example(nil, :aggregate_failures, *options, &block)
         else
           example(nil, {}) { subject }
