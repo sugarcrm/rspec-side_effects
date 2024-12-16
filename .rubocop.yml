@@ -1,5 +1,11 @@
 require: rubocop-rspec
 
+AllCops:
+  NewCops: enable
+
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
+
 Metrics/MethodLength:
   Max: 20
 

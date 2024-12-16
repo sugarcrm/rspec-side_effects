@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/side_effects/version'
 
 module Rspec
@@ -7,7 +9,7 @@ module Rspec
   # @example
   module SideEffects
     def its_side_effects_are(*options, &block)
-      its_caller = caller.reject { |file_line| file_line =~ /its_side_effects/ }
+      its_caller = caller.grep_v(/its_side_effects/)
       if options.last.is_a?(Hash)
         options.last.merge(called: its_caller)
       else
@@ -16,11 +18,12 @@ module Rspec
 
       describe('side effects', *options) do
         if block
+          # rubocop:disable Lint/RescueException, Lint/SuppressedException
           before do
-            # rubocop:disable Lint/HandleExceptions, Lint/RescueException
-            begin; subject; rescue Exception; end
-            # rubocop:enable Lint/HandleExceptions, Lint/RescueException
+            subject
+          rescue Exception
           end
+          # rubocop:enable Lint/RescueException, Lint/SuppressedException
           example(nil, :aggregate_failures, *options, &block)
         else
           example(nil, {}) { subject }

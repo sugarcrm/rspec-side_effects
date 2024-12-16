@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 class TestClass
@@ -32,7 +34,7 @@ class TestClass
   # @raise [Exception]
   def test_exception
     @exception = :exception
-    raise(Exception)
+    raise(Exception) # rubocop:disable Lint/RaiseException
   end
 end
 
@@ -49,9 +51,9 @@ RSpec.describe Rspec::SideEffects do
       subject { test_class.test1 }
 
       its_side_effects_are do
-        expect_instance_variable(:var1).to eq(:var1)
-        expect_instance_variable(:var2).to eq(nil)
-        expect_instance_variable(:var3).to eq(nil)
+        expect_instance_variable(:var1).to be(:var1)
+        expect_instance_variable(:var2).to be_nil
+        expect_instance_variable(:var3).to be_nil
       end
     end
 
@@ -76,9 +78,9 @@ RSpec.describe Rspec::SideEffects do
     subject { test_class.test2 }
 
     before do
-      # rubocop:disable RSpec/ExpectInHook, RSpec/MessageSpies
+      # rubocop:disable RSpec/ExpectInHook, RSpec/MessageSpies, RSpec/SubjectStub
       expect(test_class).to receive(:inner_test)
-      # rubocop:enable RSpec/ExpectInHook, RSpec/MessageSpies
+      # rubocop:enable RSpec/ExpectInHook, RSpec/MessageSpies, RSpec/SubjectStub
     end
 
     it_has_side_effects
@@ -88,9 +90,9 @@ RSpec.describe Rspec::SideEffects do
     subject { test_class.test1 }
 
     specify_side_effects do
-      expect_instance_variable(:var1).to eq(:var1)
-      expect_instance_variable(:var2).to eq(nil)
-      expect_instance_variable(:var3).to eq(nil)
+      expect_instance_variable(:var1).to be(:var1)
+      expect_instance_variable(:var2).to be_nil
+      expect_instance_variable(:var3).to be_nil
     end
   end
 end

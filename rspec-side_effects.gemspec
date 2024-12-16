@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rspec/side_effects/version'
@@ -16,28 +18,27 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '>= 2.2.0'
+  spec.required_ruby_version = '>= 3.1.2'
 
-  spec.add_runtime_dependency     'rspec-core', '>= 2.99.0'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 
-  spec.add_development_dependency 'bundler', '~> 1.14'
-  spec.add_development_dependency 'rake',    '~> 12.3'
-  spec.add_development_dependency 'rspec',   '~> 3.0'
+  spec.add_dependency 'rspec-core', '>= 2.99.0'
+
+  spec.add_development_dependency 'rake',  '~> 12.3'
+  spec.add_development_dependency 'rspec', '~> 3.0'
 
   # Dependencies whose APIs we do not really depend upon, and can be upgraded
   # without limiting.
   spec.add_development_dependency 'bundler-audit'
   spec.add_development_dependency 'license_finder'
-  # HACK: Limit ourselves to Rubocop versions which still support Ruby2.2. This
-  # can be removed once we drop support for Ruby2.2.
-  spec.add_development_dependency 'rubocop', '~> 0.68.0'
+  spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'rubocop-rspec'
   spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'simplecov-lcov'
   spec.add_development_dependency 'yard'
   spec.add_development_dependency 'yardstick'
 end

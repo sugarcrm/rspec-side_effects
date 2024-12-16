@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - upgrade Rake to v12 to resolve [CVE-2020-8130](https://github.com/advisories/GHSA-jppv-gw3r-w3q8)
+- minimum required Ruby version to 3.1.2, dropping support for 2.x and 3.0
 
 ## 0.2.0 - 2018-07-12
 ### Changed
