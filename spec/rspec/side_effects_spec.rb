@@ -43,7 +43,7 @@ RSpec.describe Rspec::SideEffects do
 
   # @param [#to_s] variable_name
   def expect_instance_variable(variable_name)
-    expect(test_class.instance_variable_get("@#{variable_name}"))
+    expect(test_class.instance_variable_get(:"@#{variable_name}"))
   end
 
   describe '#its_side_effects_are' do
