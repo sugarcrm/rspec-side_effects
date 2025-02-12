@@ -6,7 +6,7 @@
 [![Test Coverage](https://codeclimate.com/github/sugarcrm/rspec-side_effects/badges/coverage.svg)](https://codeclimate.com/github/sugarcrm/rspec-side_effects/coverage)
 [![License](http://img.shields.io/badge/license-Apache2-green.svg?style=flat)](LICENSE)
 
-[![RubyDoc](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://rubydoc.org/gems/rspec-side_effects)
+[![RubyDoc](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://rubydoc.info/gems/rspec-side_effects)
 
 RSpec extension for checking the side effects of your specifications.
 
